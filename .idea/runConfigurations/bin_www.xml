@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="bin\www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="DEBUG" value="todo:*" />
+      <env name="mongo_url" value="mongodb://dbUser:Newpword10@ds061620.mlab.com:61620/tododb" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser url="http://localhost:3000/" />
+    </EXTENSION>
+    <method />
+  </configuration>
+</component>
