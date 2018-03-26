@@ -74,6 +74,33 @@ router.post('/delete', function(req, res, next){
     })
 })
 
+// "POST" to close all tasks as done
+router.post('/alldone', function(req, res, next){
+    Task.updateMany({completed:false},{completed:true})
+        .then( () => {
+            res.redirect('/');
+        })
+        .catch( (err) => {
+            next(err);
+        })
+})
+
+// "GET" details about a specific task
+router.get('/task/:_id', function(req, res, next){
+    Task.findById(req.params._id)
+        .then( (doc) => {
+            if (doc){
+                res.render('task', {task: doc});
+            }
+            else{
+                next();
+            }
+        })
+        .catch( (err) => {
+            next(err);
+        })
+})
+
 
 //all code for module should be above the exports statement below
 module.exports = router;
