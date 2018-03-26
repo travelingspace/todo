@@ -6,25 +6,74 @@ var Task = require('../models/task');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  Task.find({ completed: false}).then( (docs) => {
+  Task.find({ completed: false})
+      .then( (docs) => {
     res.render('index', {title:'Incomplete Tasks', tasks: docs});
-  }).catch( (err) => {
+    }).catch( (err) => {
       next(err); //forward to error handlers
     });
 });
 
+// GET Done page of completed tasks
+router.get('/done', function(req, res, next){
+    Task.find({ completed: true})
+        .then( (docs) => {
+            res.render('completed-tasks', {title:'Completed Tasks', tasks: docs});
+        }).catch( (err) => {
+            next(err);
+        })
+})
+
 // "POST" to create a new Task
 router.post('/add', function(req, res, next){
-    //Create new task
-    var t = new Task({text: req.body.text, completed: false})
-    //Save the task and redirect to home page if successful
-    t.save().then( (newTask) => {
-        console.log('The new task created is: ', newTask );
+    //check to see if text is valid
+    if (req.body.text) {
+        //Create new task
+        var t = new Task({text: req.body.text, completed: false})
+        //Save the task and redirect to home page if successful
+        t.save().then((newTask) => {
+            console.log('The new task created is: ', newTask);
+            res.redirect('/');
+        }).catch(() => {
+            next(err);
+        });
+    }
+    else{
+        //error handling if text is left blank on submit of task
         res.redirect('/');
-    }).catch( () => {
-        next(err);
-    });
+    }
 });
+
+// "POST" to done page
+router.post('/done', function(req, res, next){
+    Task.findByIdAndUpdate(req.body._id, {completed: true})
+        .then( (originalTask) => {
+            if(originalTask){
+                res.redirect('/');
+            }else{
+                var err = new Error('Not found');
+                err.status = 404;
+                next(err);
+            }
+        } )
+})
+
+// "POST" to delete a task
+router.post('/delete', function(req, res, next){
+    Task.findByIdAndRemove(req.body._id)
+        .then( (deletedTask) =>{
+            if(deletedTask){
+                res.redirect('/');
+            }else{
+                var err = new Error('Task not found')
+                error.status = 404
+                next(err);
+            }
+        }).catch( (err) => {
+            next(err);
+    })
+})
+
 
 //all code for module should be above the exports statement below
 module.exports = router;

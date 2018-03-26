@@ -14,7 +14,19 @@
         {{#if tasks}}
             <ol>
                 {{#each tasks}}
-                    <li>{{this.text}}</li>
+                    <li>{{this.text}}
+
+                        <form class="done-form" action="/done" method="post">
+                            <input class="done-button" type="submit" name="done" value="Done!">
+                            <input type="hidden" name="_id" value="{{this.id}}">
+                        </form>
+
+                        <form class="delete-form" action="/delete" method="post">
+                            <input class="delete-button" type="submit" name="done" value="Delete">
+                            <input type="hidden" name="_id" value="{{this.id}}">
+                        </form>
+
+                    </li>
                 {{/each}}
             </ol>
 
