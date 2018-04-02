@@ -2,7 +2,7 @@
 
 <div class="add-class">
 
-    <form id="add-task-form" action="/add" method="post">
+    <form id="add-task-form" action="/add" method="POST">
         <input id="add-task-text" name="text" placeholder="todo task">
         <input id="add-task-button" name="add" type="submit" value="add">
     </form>
@@ -16,12 +16,12 @@
                 {{#each tasks}}
                     <li><a href="task/{{this._id}}">{{this.text}}"></a>
 
-                        <form class="done-form" action="/done" method="post">
+                        <form class="done-form" action="/done" method="POST">
                             <input class="done-button" type="submit" name="done" value="Done!">
                             <input type="hidden" name="_id" value="{{this.id}}">
                         </form>
 
-                        <form class="delete-form" action="/delete" method="post">
+                        <form class="delete-form" action="/delete" method="POST">
                             <input class="delete-button" type="submit" name="done" value="Delete">
                             <input type="hidden" name="_id" value="{{this.id}}">
                         </form>
