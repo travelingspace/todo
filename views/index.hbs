@@ -14,7 +14,7 @@
         {{#if tasks}}
             <ol>
                 {{#each tasks}}
-                    <li><a href="task/{{this._id}}">{{this.text}}"></a>
+                    <li><a href="task/{{this._id}}">{{this.text}}</a>
 
                         <form class="done-form" action="/done" method="POST">
                             <input class="done-button" type="submit" name="done" value="Done!">
