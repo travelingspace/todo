@@ -40,6 +40,7 @@ router.post('/add', function(req, res, next){
     }
     else{
         //error handling if text is left blank on submit of task
+        req.flash('error', 'Please enter a task.')
         res.redirect('/');
     }
 });
@@ -49,6 +50,7 @@ router.post('/done', function(req, res, next){
     Task.findByIdAndUpdate(req.body._id, {completed: true})
         .then( (originalTask) => {
             if(originalTask){
+                req.flash('info', originalTask.text + ' marked as done!');
                 res.redirect('/');
             }else{
                 var err = new Error('Not found');
@@ -63,6 +65,7 @@ router.post('/delete', function(req, res, next){
     Task.findByIdAndRemove(req.body._id)
         .then( (deletedTask) =>{
             if(deletedTask){
+                req.flash('info', 'Task deleted!');
                 res.redirect('/');
             }else{
                 var err = new Error('Task not found')
@@ -78,6 +81,7 @@ router.post('/delete', function(req, res, next){
 router.post('/alldone', function(req, res, next){
     Task.updateMany({completed:false},{completed:true})
         .then( () => {
+            req.flash('info', 'All tasks completed!');
             res.redirect('/');
         })
         .catch( (err) => {

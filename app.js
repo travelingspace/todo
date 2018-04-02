@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var bodyParser =  require('body-parser');
+var flash = require('express-flash');
+var session = require('express-session');
 
 
 //read environment variable
@@ -27,6 +30,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({secret:'top secret', resave: false, saveUninitialized: false}));
+app.use(flash());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -38,8 +44,18 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
+
+    //catches objectId errors
+    if(err.kind === 'ObjectId' && err.name === 'CastError'){
+        err.status = 404;
+        err.message = 'ObjectId Not Found';
+    }
+
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  console.log(err.kind)
+  console.log(err.name)
 
   // render the error page
   res.status(err.status || 500);
