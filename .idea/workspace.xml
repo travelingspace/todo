@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54507572-e278-42b7-bc36-813be1354d25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/db_config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_lab_features.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_slides_features.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/favicon/test/index.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/node_modules/ms/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/node_modules/ms/license.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/node_modules/ms/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/node_modules/ms/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serve-favicon/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chai/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chai/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/test/test_slides_features.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -219,24 +197,24 @@
       <workItem from="1522792559944" duration="501000" />
       <workItem from="1522801713625" duration="500000" />
       <workItem from="1522868371307" duration="404000" />
-      <workItem from="1522869016066" duration="1133000" />
+      <workItem from="1522869016066" duration="1788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27616000" />
+    <option name="totallyTimeSpent" value="28271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32731137" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32731137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -604,7 +582,7 @@
     <entry file="file://$PROJECT_DIR$/test/test_slides_features.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>
