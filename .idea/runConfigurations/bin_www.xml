@@ -3,6 +3,7 @@
     <envs>
       <env name="DEBUG" value="todo:*" />
       <env name="mongo_url" value="mongodb://dbUser:Newpword10@ds061620.mlab.com:61620/tododb" />
+      <env name="TEST_MONGO_URL" value="mongodb://dbuser:Newpword10@ds233769.mlab.com:33769/test_todo" />
     </envs>
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
       <browser url="http://localhost:3000/" />
